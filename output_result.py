@@ -18,7 +18,7 @@ def save_run_as_json(config: Args, history: History, extra_data: dict=None, file
         "results": history_dict,
     }
     results.update(extra_data)
-    json.dump(results, open(filename, "w"), indent=2)
+    json.dump(results, open(filename, "w+"), indent=2)
     logging.info(f"Saved run to {filename}")
 
 
